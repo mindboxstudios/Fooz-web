@@ -105,7 +105,7 @@ a {
 .controls {
   margin-top: 4rem; }
 
-a.btn {
+.btn {
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -114,7 +114,12 @@ a.btn {
   border-radius: 4px;
   padding: 1rem 1.5rem;
   font-size: .85rem;
-  margin-right: .85rem; }
+  margin-right: .85rem;
+  transition: .25s all ease-in-out; }
+
+.btn:hover {
+  background: #5badf0;
+  color: #fff; }
 
 /* Player Management */
 .player-list ul {
