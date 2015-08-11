@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="wrapper">
+	<div class="player-list" ng-controller="playerController">
+
+		<h2>Player Management</h2>
+		<p>[[ players.length ]] Total Players</p>
+		
+		<ul>
+			<li class="player" ng-repeat="player in players">
+				<div class="playercard">
+					<!-- <img class="avatar" src="http://placehold.it/40x40" /> -->
+					<p class="name">[[ player.firstName ]] [[ player.lastName ]]</p>
+					<p class="crud">
+						<a href="#" class="edit">Edit</a> <a href="#" class="delete">Delete</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+
+		<div class="controls">
+			<a href="#" class="btn">Add Player</a>
+		</div>
+
+	</div>
+</section>
+{% endblock content %}

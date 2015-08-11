@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,15 +12,18 @@
 	<title>{% block title %}Default{% endblock %}</title>
 	{% endblock header %}
 
+	<base href="/">
 </head>
-<body>
-	{% block content %}
-		Main content
-	{% endblock content %}
+<body ng-cloak>
+	{% block content %}{% endblock content %}
 
 	{% block scripts %}
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="//code.angularjs.org/1.4.3/angular-route.min.js"></script>
 		<script src="{% static '/js/main.js' %}"></script>
+
+		<script src="{% static '/js/app.js' %}"></script>
 	{% endblock scripts%}
 </body>
 </html>
