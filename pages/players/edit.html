@@ -1,0 +1,24 @@
+<section class="wrapper">
+	<div class="player-list" ng-controller="playerController">
+
+		<h2>Edit Player</h2>
+
+		<form name="edit">
+			<input type="text" ng-model="player.firstName" placeholder="First Name" autofocus required><br>
+
+			<input type="text" ng-model="player.lastName" placeholder="Last Name" required><br>
+
+			<input type="text" ng-model="player.nickname" placeholder="Nickname" required><br>
+
+			<input type="email" ng-model="player.email" placeholder="example@mindboxstudios.com" required><br>
+
+			<input type="text" ng-model="player.color" placeholder="#000000" required color><br>
+
+			<div class="controls">
+				<a href="#/players" class="btn">Back</a>
+				<button ng-click="save(player)" ng-disabled="edit.$invalid" type="submit" class="btn">Save</button>
+			</div>
+		</form>
+
+	</div>
+</section>
