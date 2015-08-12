@@ -65,6 +65,19 @@ a {
   max-width: 560px;
   padding: 20px; }
 
+nav {
+  margin-top: 1rem;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #eee; }
+  nav a {
+    padding: 9px 0;
+    margin-right: 1rem; }
+  nav a:hover {
+    border-bottom: 1px solid #5badf0; }
+  nav .select {
+    border-bottom: 1px solid #5badf0; }
+
 .half {
   width: 48%;
   float: left;
@@ -75,7 +88,7 @@ a {
 
 /* Scoreboard */
 .scoreboard ul {
-  margin-top: 2rem;
+  margin-top: 1rem;
   height: 60vh;
   overflow-y: scroll; }
 
@@ -90,6 +103,8 @@ a {
   padding: 1rem;
   border: 1px solid #e0e0e0;
   border-radius: 4px; }
+  .player:first-child {
+    margin-top: 0; }
 
 .playercard {
   display: inline;
@@ -129,5 +144,9 @@ a {
 
 .crud {
   float: right; }
+  .crud a {
+    margin: 0 10px; }
+    .crud a:last-child {
+      margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */

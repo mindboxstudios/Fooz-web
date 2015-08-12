@@ -50,6 +50,23 @@ a {
 	padding: 20px;
 }
 
+nav {
+	margin-top: 1rem; 
+	padding: 10px 0;
+	width: 100%; 
+	border-bottom: 1px solid #eee;
+	a {
+		padding: 9px 0;
+		margin-right: 1rem;
+	}
+	a:hover {
+		border-bottom: 1px solid #5badf0;
+	}
+	.select {
+		border-bottom: 1px solid #5badf0;
+	}
+}
+
 .half {
 	width: 48%; 
 	float: left;
@@ -63,10 +80,11 @@ a {
 /* Scoreboard */
 
 .scoreboard ul {
-	margin-top: 2rem; 
+	margin-top: 1rem; 
 	height: 60vh;
 	overflow-y: scroll; 
 }
+
 
 .rank {
 	font-weight: 700; 
@@ -79,8 +97,12 @@ a {
 	margin: 2rem 0; 
 	padding: 1rem;
 	border: 1px solid #e0e0e0; 
-	border-radius: 4px; 	
+	border-radius: 4px;
+	&:first-child {
+		margin-top: 0;
+	} 	
 }
+
 
 .playercard {
 	display: inline;
@@ -128,5 +150,11 @@ a {
 }
 
 .crud {
-	float: right; 
+	float: right;
+	a {
+		margin: 0 10px;
+		&:last-child {
+			margin-right: 0; 
+		}
+	} 
 }
