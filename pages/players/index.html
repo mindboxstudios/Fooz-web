@@ -4,16 +4,17 @@
 		<h2>Player Management</h2>
 		<p>[[ players.length ]] Total Players</p>
 		<nav role="navigation">
-			<a href="#" class="select">Alpha</a>
-			<a href="#">GP</a>
+			<a ng-class="{'select': order == 'lastName'}" ng-click="setOrder('lastName')">Alpha</a>
+			<a ng-class="{'select': order == count('matches')}" ng-click="setOrder(count('matches'))">GP</a>
+			<a ng-class="{'select': order == 'goals'}" ng-click="setOrder('goals')">GS</a>
 		</nav>
 		<ul>
-			<li class="player" ng-repeat="player in players">
+			<li class="player" ng-repeat="player in players | orderBy:order">
 				<div class="playercard">
 					<!-- <img class="avatar" src="http://placehold.it/40x40" /> -->
 					<p class="name">[[ player.firstName ]] [[ player.lastName ]]</p>
 					<p class="crud">
-						<a href="#/players/[[ player._id ]]" class="edit">Edit</a>
+						<a href="#/players/[[ player._id ]]/edit" class="edit">Edit</a>
 						<a ng-click="remove($index)" class="delete">Delete</a>
 					</p>
 				</div>
