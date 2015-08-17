@@ -1,0 +1,45 @@
+<section class="wrapper">
+	<div class="player-list" ng-controller="goalsController">
+
+		<h2>Goals</h2>
+		<p>[[ goals.length ]] Total Goals Scored</p>
+		<ul>
+			<li class="player" ng-repeat="goal in goals">
+				<div class="playercard">
+					<p class="name">
+						<strong>For</strong>
+						<a href="#/players/[[ goal.for._id ]]">[[ goal.for.firstName ]] [[ goal.for.lastName ]]</a>
+					</p>
+					
+					<div>
+						<p class="name" ng-repeat="goal in goal.against">
+							<strong ng-if="$first">Against</strong> <a href="#/players/[[ goal._id ]]">[[ goal.firstName ]] [[ goal.lastName ]]</a>
+						</p>
+					</div>
+
+					<p class="meta">
+						<strong>On</strong> [[ goal.created_at ]]<br>
+
+						<div ng-if="goal.ownGoal">
+							<strong>Own Goal</strong> True
+						</div>
+
+						<div ng-if="!goal.ownGoal">
+							<strong>Own Goal</strong> False
+						</div>
+					</p>
+
+					<p class="crud">
+						<a href="#/goals/[[ goal._id ]]/edit" class="edit">Edit</a>
+						<a ng-click="remove($index)" class="delete">Delete</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+
+		<div class="controls">
+			<a href="#/" class="btn">Back</a>
+		</div>
+
+	</div>
+</section>

@@ -1,0 +1,34 @@
+<section class="wrapper">
+	<div class="player-list" ng-controller="goalController">
+
+		<h2>Edit Goal</h2>
+
+		<form name="edit">
+			<label for="">Own Goal</label>
+			<input type="checkbox" ng-model="goal.ownGoal"><br>
+
+			<label for="">For</label>
+			<select
+				ng-model="goal.for._id"
+				ng-options="player._id as player.firstName for player in players"
+			></select><br>
+
+			<label for="">Against</label>
+			<div ng-repeat="player in goal.against">
+				<select
+					ng-model="player._id"
+					ng-options="player._id as player.firstName for player in players"
+				></select>
+
+				<a ng-if="$index !== 0" ng-click="removeAgainst($index)">Remove</a>
+				<a ng-if="goal.against.length == 1" ng-click="addAgainst()">Add another</a>
+			</div><br>
+
+			<div class="controls">
+				<a href="#/goals" class="btn">Back</a>
+				<button ng-click="save(goal)" ng-disabled="edit.$invalid" type="submit" class="btn">Save</button>
+			</div>
+		</form>
+
+	</div>
+</section>
