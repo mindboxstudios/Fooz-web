@@ -35,7 +35,7 @@ function retina() {
  
 $(document).ready(retina);
 
-$( 'nav a' ).click(function() {
+/*$( 'nav a' ).click(function() {
     $( 'nav a' ).removeClass( 'select' ) ;
     $( this ).addClass( "select" );
-});
+});*/
